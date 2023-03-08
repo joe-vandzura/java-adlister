@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+<%@ include file="partials/navbar.jsp" %>
 <h1>Hello</h1>
 
 <form method="POST" action="login.jsp">
