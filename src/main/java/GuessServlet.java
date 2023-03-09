@@ -12,7 +12,7 @@ public class GuessServlet extends HttpServlet {
         req.getRequestDispatcher("/guessing.jsp").forward(req, res);
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         int correctNumber = (int) (Math.random() * (3 - 1 + 1) + 1);
         int guess = Integer.parseInt(req.getParameter("number"));
 

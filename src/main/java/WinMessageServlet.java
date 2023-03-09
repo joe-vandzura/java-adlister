@@ -9,8 +9,6 @@ import java.io.IOException;
 public class WinMessageServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-    }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
     }
 }
