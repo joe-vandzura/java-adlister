@@ -1,6 +1,5 @@
-package dao;
+package adlister;
 
-import beans.Ad;
 import java.util.List;
 
 public interface Ads {

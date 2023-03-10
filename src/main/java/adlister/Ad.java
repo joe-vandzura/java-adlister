@@ -1,4 +1,4 @@
-package beans;
+package adlister;
 
 public class Ad {
     private long id;

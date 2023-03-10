@@ -1,4 +1,4 @@
-package dao;
+package adlister;
 
 public class DaoFactory {
     private static Ads adsDao;

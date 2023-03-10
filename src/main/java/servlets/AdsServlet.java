@@ -1,7 +1,6 @@
 package servlets;
 
-import dao.DaoFactory;
-import dao.ListAdsDao;
+import adlister.DaoFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

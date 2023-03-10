@@ -1,6 +1,5 @@
-package dao;
+package adlister;
 
-import beans.Ad;
 import java.util.ArrayList;
 import java.util.List;
 
