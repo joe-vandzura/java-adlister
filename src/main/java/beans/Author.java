@@ -9,7 +9,6 @@ import java.io.Serializable;
 @Setter
 @ToString
 public class Author implements Serializable {
-
     private int id;
     private String firstName;
     private String lastName;

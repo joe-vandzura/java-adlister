@@ -9,8 +9,7 @@ import java.io.Serializable;
 @Setter
 @ToString
 public class Quote implements Serializable {
-
     private int id;
     private String content;
-    private Author author = new Author();
+    private Author author;
 }

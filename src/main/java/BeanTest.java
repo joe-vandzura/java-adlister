@@ -1,15 +1,13 @@
 import beans.Album;
 import beans.Author;
 import beans.Quote;
-
-import java.time.Year;
 import java.util.ArrayList;
 
 public class BeanTest {
     public static void main(String[] args) {
 
-        Album albumOne = new Album(1, "Skillet", "Awake", Year.of(2009), 2.3, "Rock");
-        Album albumTwo = new Album(2, "Golden Earring", "Cut", Year.of(1982), 1.5, "Rock");
+        Album albumOne = new Album(1, "Skillet", "Awake", 2009, 2.3, "Rock");
+        Album albumTwo = new Album(2, "Golden Earring", "Cut", 1982, 1.5, "Rock");
 
         System.out.println(albumOne);
         System.out.println(albumTwo);
