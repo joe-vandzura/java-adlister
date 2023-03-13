@@ -6,10 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
-
     private List<Ad> ads;
-
-    private Connection connection;
+    private Connection connection = null;
 
     public MySQLAdsDao(Config config) {
         try {
@@ -29,7 +27,7 @@ public class MySQLAdsDao implements Ads {
         List<Ad> ads = new ArrayList<>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM ymir_joe.ads");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
             while (rs.next()) {
                 ads.add(new Ad(
                         rs.getLong("ad_id"),
