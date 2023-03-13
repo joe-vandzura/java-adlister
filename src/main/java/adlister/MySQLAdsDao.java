@@ -27,7 +27,7 @@ public class MySQLAdsDao implements Ads {
         List<Ad> ads = new ArrayList<>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM ymir_joe.ads");
             while (rs.next()) {
                 ads.add(new Ad(
                         rs.getLong("ad_id"),
@@ -42,16 +42,16 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
     public Long insert(Ad ad) {
-        // make sure we have ads
-        if (ads == null) {
-            ads = generateAds();
+        try {
+            Statement stmt = connection.createStatement();
+            String sql = String.format("INSERT INTO ads (title, description, user_id) VALUES ('%s', '%s', %d);", ad.getTitle(), ad.getDescription(), ad.getUserId());
+            long results = stmt.executeUpdate(sql);
+            return results;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        // we'll assign an "id" here based on the size of the ads list
-        // really the database would handle this
-        ad.setId((long) ads.size());
-        ads.add(ad);
-        return ad.getId();
     }
 
     private List<Ad> generateAds() {
