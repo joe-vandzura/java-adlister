@@ -7,11 +7,10 @@
 </head>
 <body>
 <h1>Here are your ads: </h1>
-<ul>
+
     <c:forEach var="ads" items="${ads}">
-        <li id=${ads} class="my-li">${ads}</li>
+        <div class="my-li">${ads}</div>
     </c:forEach>
-</ul>
 
 </body>
 </html>
