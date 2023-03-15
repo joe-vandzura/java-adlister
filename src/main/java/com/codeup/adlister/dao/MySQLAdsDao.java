@@ -3,7 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 import com.mysql.cj.jdbc.PreparedStatement;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +53,7 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
+            rs.getLong("ad_id"),
             rs.getLong("user_id"),
             rs.getString("title"),
             rs.getString("description")
