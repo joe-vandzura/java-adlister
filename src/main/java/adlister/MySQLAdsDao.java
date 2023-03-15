@@ -47,8 +47,7 @@ public class MySQLAdsDao implements Ads {
         try {
             Statement stmt = connection.createStatement();
             String sql = String.format("INSERT INTO ads (title, description, user_id) VALUES ('%s', '%s', %d);", ad.getTitle(), ad.getDescription(), ad.getUserId());
-            long results = stmt.executeUpdate(sql);
-            return results;
+            return (long) stmt.executeUpdate(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
